@@ -30,7 +30,7 @@ begin
     LToken.Claims.SetClaimOfType<string>('nome', 'Yan Pablo');
     LToken.Claims.SetClaimOfType<Boolean>('Programador Delphi', True);
     Res.Send(lcompactToken);
-        // Signing and Compact format creation
+       // Criação de assinatura e formato compactado
     LCompactToken := TJOSE.SHA256CompactToken('key', LToken);
     Res.Send(LCompactToken);
     finally
